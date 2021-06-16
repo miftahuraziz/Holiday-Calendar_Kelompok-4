@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/item_list"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    android:orientation="horizontal"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="4dp"
+    app:cardElevation="4dp"
+    android:layout_margin="4dp">
+
+    <LinearLayout
+        android:id="@+id/item_date_box"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:orientation="vertical"
+        android:background="#2c3cd1">
+
+        <TextView
+            android:id="@+id/item_tv_date_number"
+            android:layout_width="100dp"
+            android:layout_height="70dp"
+            android:text="01"
+            android:textColor="@color/white"
+            android:textAlignment="center"
+            android:textSize="60sp" />
+        <TextView
+            android:id="@+id/item_tv_month"
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+            android:paddingTop="4dp"
+            android:text="January"
+            android:textColor="@color/white"
+            android:textAlignment="center"
+            android:textStyle="bold"
+            android:textSize="16sp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:orientation="vertical"
+        android:layout_marginStart="105dp"
+        android:layout_marginEnd="4dp">
+
+        <TextView
+            android:id="@+id/item_tv_holiday_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="New Year's Day"
+            android:textColor="#2c3cd1"
+            android:textSize="20sp"
+            android:layout_marginTop="16dp"/>
+
+        <TextView
+            android:id="@+id/item_tv_full_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="January 01, 2020, Monday"
+            android:textSize="12sp"
+            android:layout_marginTop="2dp"
+            android:textColor="@color/black" />
+    </LinearLayout>
+</androidx.cardview.widget.CardView>
