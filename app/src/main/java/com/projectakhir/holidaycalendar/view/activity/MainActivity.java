@@ -16,6 +16,8 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
 
     private Fragment selectedFragment = new HolidayFragment();
     private BottomNavigationView bottomNavigationView;
+    private String title;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,10 +35,14 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
             case R.id.bottom_nav_calendar:
                 selectedFragment = new HolidayFragment();
                 loadFragment(selectedFragment);
+                title = "Holiday Calendar 2020";
+                setTitle(title);
                 break;
             case R.id.bottom_nav_about:
                 selectedFragment = new AboutFragment();
                 loadFragment(selectedFragment);
+                title = "Developer";
+                setTitle(title);
                 break;
         }
         return loadFragment(selectedFragment);

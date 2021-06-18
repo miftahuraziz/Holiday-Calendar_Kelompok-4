@@ -6,6 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.core.content.ContextCompat;
@@ -101,6 +102,13 @@ public class HolidayAdapter extends RecyclerView.Adapter<HolidayAdapter.ViewHold
             tvFullDate = itemView.findViewById(R.id.item_tv_full_date);
             
             dateBox = itemView.findViewById(R.id.item_date_box);
+
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Toast.makeText(context, tvHolidayName.getText(), Toast.LENGTH_SHORT).show();
+                }
+            });
         }
     }
 }
