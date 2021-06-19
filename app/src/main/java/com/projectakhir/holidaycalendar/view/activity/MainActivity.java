@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.view.MenuItem;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.projectakhir.holidaycalendar.view.fragment.CalendarFragment;
 import com.projectakhir.holidaycalendar.view.fragment.HolidayFragment;
 import com.projectakhir.holidaycalendar.R;
 import com.projectakhir.holidaycalendar.view.fragment.AboutFragment;
@@ -32,10 +33,16 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId()) {
-            case R.id.bottom_nav_calendar:
+            case R.id.bottom_nav_holiday:
                 selectedFragment = new HolidayFragment();
                 loadFragment(selectedFragment);
                 title = "Holiday Calendar 2020";
+                setTitle(title);
+                break;
+            case R.id.bottom_nav_calendar:
+                selectedFragment = new CalendarFragment();
+                loadFragment(selectedFragment);
+                title = "Calendar";
                 setTitle(title);
                 break;
             case R.id.bottom_nav_about:

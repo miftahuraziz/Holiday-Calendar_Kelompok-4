@@ -11,7 +11,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.HolidayCalendar">
-        <activity android:name=".view.activity.DetailAboutActivity"></activity>
+        <activity android:name=".view.activity.ReadCalendarEventActivity"></activity>
+        <activity android:name=".view.activity.DetailAboutActivity" />
         <activity android:name=".view.activity.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

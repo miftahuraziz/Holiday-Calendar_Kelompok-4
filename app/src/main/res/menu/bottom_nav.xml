@@ -2,9 +2,15 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
+        android:id="@+id/bottom_nav_holiday"
+        android:title="Holiday"
+        android:icon="@drawable/ic_date"
+        app:showAsAction="ifRoom" />
+
+    <item
         android:id="@+id/bottom_nav_calendar"
         android:title="Calendar"
-        android:icon="@drawable/ic_date"
+        android:icon="@drawable/ic_today"
         app:showAsAction="ifRoom" />
 
     <item
