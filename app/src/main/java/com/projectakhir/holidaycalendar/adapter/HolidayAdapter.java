@@ -73,12 +73,14 @@ public class HolidayAdapter extends RecyclerView.Adapter<HolidayAdapter.ViewHold
             e.printStackTrace();
         }
         String fullDate = new SimpleDateFormat("EEEE, dd MMMM yyyy", locale).format(date);
-        String tgl = new SimpleDateFormat("dd", locale).format(date);
-        String bulan = new SimpleDateFormat("MMMM", locale).format(date);
+        String dateNumber = new SimpleDateFormat("dd", locale).format(date);
+        String day = new SimpleDateFormat("EEEE", locale).format(date);
+        String month = new SimpleDateFormat("MMMM", locale).format(date);
 
         holder.tvFullDate.setText(fullDate);
-        holder.tvDateNumber.setText(tgl);
-        holder.tvMonth.setText(bulan);
+        holder.tvDateNumber.setText(dateNumber);
+        holder.tvDay.setText(day);
+        holder.tvMonth.setText(month);
 
         holder.dateBox.setBackgroundColor(listColor.get(position));
         holder.tvHolidayName.setTextColor(listColor.get(position));
@@ -90,13 +92,14 @@ public class HolidayAdapter extends RecyclerView.Adapter<HolidayAdapter.ViewHold
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
-        TextView tvDateNumber, tvMonth, tvHolidayName, tvFullDate;
+        TextView tvDateNumber, tvMonth, tvHolidayName, tvFullDate, tvDay;
         LinearLayout dateBox;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
 
             tvDateNumber = itemView.findViewById(R.id.item_tv_date_number);
+            tvDay = itemView.findViewById(R.id.item_tv_day);
             tvMonth = itemView.findViewById(R.id.item_tv_month);
             tvHolidayName = itemView.findViewById(R.id.item_tv_holiday_name);
             tvFullDate = itemView.findViewById(R.id.item_tv_full_date);

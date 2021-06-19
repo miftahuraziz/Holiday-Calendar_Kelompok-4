@@ -15,20 +15,25 @@
         android:layout_height="100dp"
         android:orientation="vertical"
         android:background="#2c3cd1">
-
+        <TextView
+            android:id="@+id/item_tv_day"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:text="Monday"
+            android:textColor="@color/white"
+            android:textAlignment="center" />
         <TextView
             android:id="@+id/item_tv_date_number"
             android:layout_width="100dp"
-            android:layout_height="70dp"
+            android:layout_height="60dp"
             android:text="01"
             android:textColor="@color/white"
             android:textAlignment="center"
-            android:textSize="60sp" />
+            android:textSize="50sp" />
         <TextView
             android:id="@+id/item_tv_month"
             android:layout_width="100dp"
-            android:layout_height="30dp"
-            android:paddingTop="4dp"
+            android:layout_height="20dp"
             android:text="January"
             android:textColor="@color/white"
             android:textAlignment="center"
